@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly group: "org.osgi", name: "org.osgi.service.jaxrs", version: "1.0.1"
+    implementation platform('com.google.auth:google-auth-library-bom:1.30.1')
+
+    implementation 'com.google.code.gson:gson:2.13.1'
+    implementation 'com.google.auth:google-auth-library-oauth2-http'
+    implementation 'com.google.api-client:google-api-client:1.32.1'
+    implementation 'com.google.apis:google-api-services-mybusinessbusinessinformation:v1-rev20250217-2.0.0'
+}
